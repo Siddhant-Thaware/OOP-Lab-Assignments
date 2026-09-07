@@ -1,11 +1,21 @@
+/*
+Name: Siddhant Thaware
+PRN: B25ET1056
+Batch: C1
+Practical: 5
+Program: Function Overloading
+*/
+
 #include <iostream>
 using namespace std;
 
+// Function to add two numbers
 int add(int a, int b)
 {
     return a + b;
 }
 
+// Function to add three numbers
 int add(int a, int b, int c)
 {
     return a + b + c;
@@ -13,7 +23,10 @@ int add(int a, int b, int c)
 
 int main()
 {
+    // Calling overloaded function with two arguments
     cout << "Addition of 2 numbers = " << add(10, 20) << endl;
+
+    // Calling overloaded function with three arguments
     cout << "Addition of 3 numbers = " << add(10, 20, 30) << endl;
 
     return 0;
