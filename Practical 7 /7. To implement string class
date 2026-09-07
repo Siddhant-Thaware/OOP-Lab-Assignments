@@ -1,29 +1,42 @@
+/*
+Name: Siddhant Thaware
+PRN: B25ET1056
+Batch: C1
+Practical: 7
+Program: String Class
+*/
+
 #include <iostream>
 #include <cstring>
 using namespace std;
 
+// Class to implement String
 class String
 {
     char *str;
 
 public:
+    // Default constructor
     String()
     {
         str = new char[1];
         str[0] = '\0';
     }
 
+    // Parameterized constructor
     String(const char *s)
     {
         str = new char[strlen(s) + 1];
         strcpy(str, s);
     }
 
+    // Destructor
     ~String()
     {
         delete[] str;
     }
 
+    // Function to accept string
     void accept()
     {
         char temp[100];
@@ -37,5 +50,22 @@ public:
         strcpy(str, temp);
     }
 
+    // Function to display string
     void display()
-   
+    {
+        cout << "String: " << str << endl;
+    }
+};
+
+int main()
+{
+    String s1;
+
+    s1.accept();
+    s1.display();
+
+    String s2("Hello");
+    s2.display();
+
+    return 0;
+}
