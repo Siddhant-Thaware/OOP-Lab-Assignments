@@ -1,18 +1,29 @@
+/*
+Name: Siddhant Thaware
+PRN: B25ET1056
+Batch: C1
+Practical: 6
+Program: Complex Number using Operator Overloading
+*/
+
 #include <iostream>
 using namespace std;
 
+// Class for complex number operations
 class Complex
 {
 private:
     float real, img;
 
 public:
+    // Function to accept complex number
     void accept(float r, float i)
     {
         real = r;
         img = i;
     }
 
+    // Operator overloading for addition
     Complex operator+(Complex x)
     {
         Complex sum;
@@ -21,6 +32,7 @@ public:
         return sum;
     }
 
+    // Operator overloading for subtraction
     Complex operator-(Complex x)
     {
         Complex diff;
@@ -29,6 +41,7 @@ public:
         return diff;
     }
 
+    // Operator overloading for multiplication
     Complex operator*(Complex x)
     {
         Complex product;
@@ -37,6 +50,7 @@ public:
         return product;
     }
 
+    // Operator overloading for division
     Complex operator/(Complex x)
     {
         Complex quotient;
@@ -47,6 +61,7 @@ public:
         return quotient;
     }
 
+    // Function to display complex number
     void display()
     {
         if (img >= 0)
@@ -81,6 +96,7 @@ int main()
 
     c2.accept(r, i);
 
+    // Display input complex numbers
     cout << "First Complex Number:\n ";
     c1.display();
 
