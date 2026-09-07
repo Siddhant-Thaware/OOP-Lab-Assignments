@@ -1,5 +1,14 @@
+Name: Siddhant Thaware
+PRN: B25ET1056
+Batch: C1
+Practical: 3
+Program: Array Sorting
+*/
+
 #include <iostream>
 using namespace std;
+
+// Function to accept array elements
 void acceptArray(int arr[], int n)
 {
     cout << "Enter element are - " << n ;
@@ -8,6 +17,8 @@ void acceptArray(int arr[], int n)
         cin >> arr[i];
     }
 }
+
+// Function to display array elements
 void displayArray(int arr[], int n)
 {
     cout << "Array elements are:\n";
@@ -16,9 +27,10 @@ void displayArray(int arr[], int n)
         cout << arr[i];
     }
 }
+
+// Function to sort the array using bubble sort
 void sorting(int arr[], int n)
 {
-
     for (int i = 0; i < n; i++){
         for(int j=0;j<n-i-1;j++){
              if (arr[j] > arr[j + 1])
@@ -27,28 +39,35 @@ void sorting(int arr[], int n)
              }
         }
     }
-
 }
+
+// Function to swap two elements
 void swap(int &m,int &n){
     int temp=m;
     m=n;
     n=temp;
 }
 
-
-
 int main(){
-int n;
+    int n;
+
     cout << "Enter the number of elements: ";
     cin >> n;
+
     int arr[100];  
+
     acceptArray(arr, n);
+
+    // Display array before sorting
     cout<<" befor sorting\n ";
+    displayArray(arr,n);
 
-    displayArray(arr, n);
+    sorting(arr,n);
 
-     sorting(arr,n);
-     cout<<" \n after sorting element\n";
-      displayArray(arr,n);
+    // Display array after sorting
+    cout<<" \n after sorting element\n";
+    displayArray(arr,n);
+
     return 0;
 }
+
