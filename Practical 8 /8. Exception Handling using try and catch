@@ -1,3 +1,11 @@
+/*
+Name: Siddhant Thaware
+PRN: B25ET1056
+Batch: C1
+Practical: 8
+Program: Exception Handling
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -11,6 +19,7 @@ int main()
     cout << "Enter denominator: ";
     cin >> b;
 
+    // Try block to check for exception
     try
     {
         if (b == 0)
@@ -18,6 +27,8 @@ int main()
 
         cout << "Result = " << (float)a / b << endl;
     }
+
+    // Catch block to handle exception
     catch (const char *msg)
     {
         cout << "Exception: " << msg << endl;
